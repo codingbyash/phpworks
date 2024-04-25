@@ -1,0 +1,111 @@
+/* Profile Page CSS */
+.profile-card {
+     background-color: var(--background-color);
+     border-radius: 10px;
+     padding: 20px;
+     margin: 20px 0;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     transition: box-shadow 0.3s ease-in-out;
+ }
+ 
+ .profile-card:hover {
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+     transform: translateY(-5px);
+ }
+ 
+ .profile-header {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+ }
+ 
+ .profile-picture img {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     margin-right: 20px;
+ }
+ 
+ .profile-info {
+     flex-grow: 1;
+ }
+ 
+ .name {
+     font-size: 24px;
+     margin: 0;
+     font-family: var(--font-heading);
+     color: var(--dark-pink);
+ }
+ 
+ .username {
+     font-size: 18px;
+     color: var(--primary-color);
+ }
+ 
+ .tagline {
+     font-size: 14px;
+     color: var(--neutral-color);
+ }
+ 
+ .description {
+     font-size: 16px;
+     margin-bottom: 20px;
+     color: var(--text-color);
+ }
+ 
+ a.button {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: var(--primary-color);
+     color: var(--background-color);
+     border-radius: 8px;
+     text-decoration: none;
+     margin-bottom: 20px;
+     cursor: pointer;
+     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+ 
+ a.button:hover {
+     background-color: var(--primary-color-hover);
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ form input[type="text"],
+ form input[type="file"],
+ form button {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+     border-radius: 8px;
+ }
+ 
+ form input[type="text"] {
+     border: 2px solid var(--light-pink);
+     transition: border-color 0.3s ease-in-out;
+ }
+ 
+ form input[type="text"]:hover,
+ form input[type="text"]:focus {
+     border-color: var(--dark-pink);
+ }
+ 
+ form input[type="file"] {
+     border: none;
+     background-color: var(--background-color);
+     color: var(--text-color);
+ }
+ 
+ form button {
+     border: none;
+     background-color: var(--primary-color);
+     color: var(--background-color);
+     cursor: pointer;
+     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+ 
+ form button:hover {
+     background-color: var(--primary-color-hover);
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+ }
+ 

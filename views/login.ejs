@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vkart</title>
+    <link rel="shortcut icon" href="./images/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/logincss.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <% if(error.length>0){ %>
+            <p class="error"> <%= error %>  </p>
+            <% } %>
+        <div class="buttons">
+            <button onclick="showUserLoginForm()">User Login</button>
+            <button onclick="showAdminLoginForm()">Admin Login</button>
+        </div>
+        <form action="/login" method="post" id="userLoginForm" style="display: none;">
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <button type="submit" class="btn-int" value="Login"> Login</button>
+        </form>
+        <form id="adminLoginForm" style="display: none;">
+            <input type="text" name="adminUsername" placeholder="Admin Username"><br>
+            <input type="password" name="adminPassword" placeholder="Admin Password"><br>
+            <button type="submit">Login</button>
+        </form>
+        <!-- Facebook Login Button -->
+        <div class="social-login">
+            <button onclick="loginWithFacebook()">Login with Facebook</button>
+        </div>
+        <!-- Registration Link -->
+        <div class="registration-link">
+            <p>Haven't registered yet? <a href="/signup">Tap to sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showUserLoginForm() {
+            document.getElementById("userLoginForm").style.display = "block";
+            document.getElementById("adminLoginForm").style.display = "none";
+        }
+
+        function showAdminLoginForm() {
+            document.getElementById("adminLoginForm").style.display = "block";
+            document.getElementById("userLoginForm").style.display = "none";
+        }
+
+        function loginWithFacebook() {
+            // Add your Facebook login integration code here
+        }
+    </script>
+</body>
+
+</html>
